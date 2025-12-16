@@ -1,30 +1,37 @@
+//Question 1
 #include <iostream>
 using namespace std;
 
 int main(){
+    // a. Create fixed-state array of capacity 7
     const int capacity = 7;
-    int arr[capacity]; 
-    int count_num = 0;
-    cout << "Enter 5 numbers into the array: " << endl;
-    for(int i=0;  i< 5; i++){
+    int arr[capacity];
+    int size = capacity;
+
+    //Accept elements from user
+    cout << "Enter 7 numbers into the array: " << endl;
+    for(int i=0;  i< size; i++){
         cin >> arr[i]; //user enters elements
-        count_num++;
     }
-    cout << "Original Array: ";
-    for(int i=0; i<count_num; i++){
-        cout << arr[i] << " "; //print array
-    }
-
-    //Inserting 3 at index 0
-    //Shifting elements to the right
-    for(int i= count_num-1; i>0; i--){
-        arr[i] = arr[i-1];
+    //Print array
+    cout << "Original Array: " << endl;
+    for(int i=0; i<size; i++){
+        cout << arr[i] << endl; //print array
     }
 
-    arr[0] = 3;
-    count_num++;
-    cout << "Array after inserting 3 at index 0: ";
-    for(int i=0; i<count_num; i++){
-        cout << arr[i] << " "; //print array
+    ///Inserting 3 at index 0
+    int insertVal1 = 3;
+    for(int i = size-1; i > 0; i--){
+        arr[i] = arr[i-1]; // suppose i = 5, this statement would mean that arr[5] = arr[4], the element at index 4 would be shifted to index 5. Shifting to the right
     }
+    arr[0] = insertVal1;
+
+    cout << "Array after inserting 3 at index 0: " << endl;
+    for(int i = 0; i<size; i++){
+        cout << arr[i] << "";
+        cout << endl;
+    }
+    
+   
+   return 0;
 }

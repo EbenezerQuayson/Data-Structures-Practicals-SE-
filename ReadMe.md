@@ -1,7 +1,7 @@
 Practical Section Questions
 1. Implementing Static Array
 a. Create a fixed-size array of capacity 7. Use for loop to accept elements into the array and print out the array.
-b. Insert the numbers [3] at index 0 using shift-insert and 8
+b. Insert the numbers [3] at index 0 using shift-insert and 8 at the end
 c. Show the array after each insertion. 
 d. Delete the element at index 2 using a shift-left deletion. Show the array after deletion. 
 e. Implement and run a linear search to find value 6 and return its index or -1 if not found.
